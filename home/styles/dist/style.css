@@ -1,0 +1,282 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+li,
+button,
+label,
+input,
+a,
+p {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 4rem;
+}
+
+h3 {
+  font-size: 2.5rem;
+}
+
+h4,
+h5 {
+  font-size: 2rem;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #2c2c2c;
+}
+
+.main-head {
+  width: 95%;
+  margin: 10px 0 0 auto;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  min-height: 10vh;
+  width: 64%;
+  flex-wrap: wrap;
+}
+nav .logo {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  flex: 1 1 10rem;
+}
+nav .logo h1 {
+  margin: 2rem;
+}
+nav ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  flex: 1 1 40rem;
+}
+
+.intro {
+  min-height: 89vh;
+  width: 90%;
+  margin: auto;
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+.intro h2 {
+  font-size: 8rem;
+  padding-top: 2rem;
+  background-image: linear-gradient(left, #38d39f, #38a4d3);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+.intro h3 {
+  font-size: 6rem;
+  padding: 2rem 0rem;
+}
+.intro p {
+  padding-top: 2rem;
+  color: #2c2c2c;
+}
+
+svg {
+  position: absolute;
+  top: 20%;
+  right: 0%;
+  height: 65vh;
+}
+
+.splash {
+  position: absolute;
+  top: 0%;
+  right: 0%;
+  height: 100vh;
+  z-index: -4;
+}
+
+.intro-social {
+  margin-top: 4rem;
+}
+.intro-social a {
+  margin: 5rem;
+}
+
+.active {
+  background: #2c2c2c;
+  color: white;
+  padding: 1rem 3rem;
+  border-radius: 2rem;
+}
+
+.intro-text,
+.intro-img {
+  flex: 1 1 40rem;
+}
+
+#plant-left {
+  animation: plant 1.5s ease infinite alternate;
+}
+
+#plant-right {
+  animation: plant 1.5s ease infinite alternate 0.5s;
+}
+
+#me {
+  animation: me 1.5s ease infinite alternate;
+  transform-origin: bottom;
+}
+
+#clock-arrow {
+  animation: clock 3.5s linear infinite;
+  transform-box: fill-box;
+  transform-origin: bottom;
+}
+
+.hamburger {
+  display: none;
+  font-size: 5rem;
+}
+
+@keyframes plant {
+  from {
+    transform: translateY(0%);
+  }
+  to {
+    transform: translateY(-30%);
+  }
+}
+@keyframes me {
+  from {
+    transform: rotateZ(-3deg);
+  }
+  to {
+    transform: rotateZ(3deg);
+  }
+}
+@keyframes clock {
+  from {
+    transform: rotateZ(0deg);
+  }
+  to {
+    transform: rotateZ(360deg);
+  }
+}
+@media screen and (max-width: 1124px) {
+  html {
+    font-size: 50%;
+  }
+
+  svg {
+    width: 50%;
+  }
+}
+@media screen and (min-width: 2500px) {
+  html {
+    font-size: 110%;
+  }
+
+  nav {
+    margin-top: 20px;
+  }
+  nav .logo {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    flex: 2 1 20rem;
+  }
+  nav .logo img {
+    width: 5vw;
+  }
+  nav .logo h1 {
+    margin: 2rem;
+    font-size: 60px;
+  }
+  nav ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    flex: 2 1 40rem;
+  }
+
+  svg {
+    width: 50vw;
+  }
+}
+@media screen and (max-width: 766px) {
+  html {
+    font-size: 45%;
+  }
+
+  .main-head {
+    height: 150px;
+  }
+
+  .splash {
+    display: none;
+  }
+
+  svg {
+    position: relative;
+    width: 70%;
+    margin: auto;
+  }
+
+  nav {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+  nav .logo {
+    width: 80%;
+  }
+  nav ul {
+    display: none;
+    margin: 5rem auto;
+  }
+  nav .hamburger {
+    display: block;
+    width: 20%;
+  }
+
+  .intro h2 {
+    display: block;
+    margin: 0px auto;
+    background-position: center;
+  }
+  .intro h3 {
+    text-align: center;
+    color: red;
+  }
+}
+.toggle-menu {
+  display: block;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  flex: 1 1 40rem;
+}
